@@ -26,14 +26,5 @@ jobs: #Commandes à exécuter
           cache: maven
       - name: Build Code
         run: mvn compile
-      - name: Run the scan against the codebase #CodeQL scan action
-        id: run-scan
-        uses: tonys-code-base/run-codeql-analysis-action@master
-        with:
-          language_to_scan: java
-          token: ${{ secrets.GITHUB_TOKEN }}
-        shell: chmod +x /home/runner/work/_actions/tonys-code-base/run-codeql-analysis-action/master/src/codeql-scan.sh
       - name: Execute test
         run: mvn test
-
-
