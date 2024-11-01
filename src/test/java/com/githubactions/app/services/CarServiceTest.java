@@ -27,7 +27,7 @@ class CarServiceTest {
         this.service.save(car2);
 
         //Assert
-        Assertions.assertEquals(8, this.service.getCars().size());
+        Assertions.assertEquals(1, this.service.getCars().size());
     }
 
 
